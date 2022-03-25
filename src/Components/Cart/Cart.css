@@ -1,0 +1,12 @@
+.cart img{
+width: 50px;
+border-radius: 50%;
+}
+.cart{
+    height: 70px;
+    padding: 10px;
+    background-color: rgb(122, 121, 121);
+    display: flex;
+    border-radius: 10px;
+    margin-top: 10px;
+}

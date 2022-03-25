@@ -1,11 +1,16 @@
-.meal-container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr) ;
-    gap: 10px;
+.foods-container {
+  position: relative;
 }
-.cart-container{
-    background-color: gray;
-   padding: 0 10px;
+.meal-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.cart-container {
+  background-color: rgb(2, 53, 53);
+  padding: 10px;
+  position: sticky !important;
+  top: 0;
 }
 @media only screen and (max-width: 600px) {
   .meal-container {
