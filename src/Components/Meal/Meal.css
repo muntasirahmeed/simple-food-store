@@ -1,0 +1,25 @@
+.meal-img img{
+    width: 315px;
+    height: 240px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.meal-img{
+    display: flex;
+    justify-content: center;
+}
+.meal{
+    background-color: rgb(235, 234, 234);
+    width: 340px;
+    border-radius: 10px;
+    height: 430px;
+}
+.info{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info button span{
+    margin-left: 5px;
+}
