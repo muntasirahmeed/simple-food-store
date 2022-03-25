@@ -9,8 +9,8 @@ const Header = () => {
             <Navbar.Brand className=' text-warning' href="#home">Food Store</Navbar.Brand>
             <Nav className="ms-auto">
               <Nav.Link className='nav-text' href="#home">Home</Nav.Link>
-              <Nav.Link className='nav-text' href="#features">Features</Nav.Link>
-              <Nav.Link className='nav-text' href="#pricing">Pricing</Nav.Link>
+              <Nav.Link className='nav-text' href="#features">Feature</Nav.Link>
+              <Nav.Link className='nav-text' href="#pricing">Price</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
