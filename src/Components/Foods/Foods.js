@@ -5,8 +5,6 @@ import "./Foods.css";
 const Foods = () => {
   const [foods, setFoods] = useState([]);
   const [carts, setCart] = useState([]);
-  const [randomCarts, setRandomCarts] = useState([]);
-  console.log(randomCarts);
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -14,34 +12,17 @@ const Foods = () => {
   }, []);
   const addToCart = (meal) => {
     const newCart = [...carts, meal];
-    if (newCart.length > 4) {
+    if (newCart.length > 4 ){
       return;
     }
     setCart(newCart);
   };
-    function choseOne(carts) {
-    //     const randomNum = () => {
-    //         const FoodId = Math.floor(Math.random() * 10);
-    //         if(FoodId)
-    //   }
-    // let randomCart;
-    // for (const cart of carts) {
-      const FoodId = Math.floor(Math.random() * 10);
-      const randomFood = carts.find(cart => cart.id !== FoodId);
-      setRandomCarts(randomFood)
-    //   if (cart.id === randomFoodId) {
-    //     randomCart = cart;
-    //     // console.log(randomCart);
-    //     setRandomCarts(randomCart);
-    //     return;
-    //   } else {
-    //     return choseOne(carts);
-    //   }
-    // }
-   
-  };
-    const removeAllItems = () => {
-        setCart([])
+  function choseOne() {
+    const randomFood = carts[Math.floor(Math.random() * carts.length)];
+    setCart([randomFood]);
+  }
+  const removeAllItems = () => {
+    setCart([]);
   };
   return (
     <div className="container">
@@ -65,10 +46,7 @@ const Foods = () => {
             <button onClick={() => choseOne(carts)} className="btn btn-warning">
               Chose One
             </button>
-            <button
-              onClick={removeAllItems}
-              className="btn btn-danger"
-            >
+            <button onClick={removeAllItems} className="btn btn-danger">
               Again
             </button>
           </div>
