@@ -6,7 +6,7 @@ const Header = () => {
       <nav>
         <Navbar className='nav-bar'>
           <Container>
-            <Navbar.Brand className=' text-warning' href="#home">Food Store</Navbar.Brand>
+            <Navbar.Brand className=' text-warning fw-bolder' href="#home">FOOD STORE</Navbar.Brand>
             <Nav className="ms-auto">
               <Nav.Link className='nav-text' href="#home">Home</Nav.Link>
               <Nav.Link className='nav-text' href="#features">Feature</Nav.Link>

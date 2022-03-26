@@ -11,28 +11,32 @@ const Foods = () => {
       .then((data) => setFoods(data));
   }, []);
   const addToCart = (meal) => {
-   const newCart=[...carts,meal]
+    const newCart = [...carts, meal];
     if (newCart.length > 4) {
       return;
     }
     setCart(newCart);
   };
   function choseOne() {
-    const randomFood = carts[Math.floor(Math.random() * carts.length)];
-    setCart([randomFood]);
+    if (carts === []) {
+      return;
+    } else {
+      const randomFood = carts[Math.floor(Math.random() * carts.length)];
+      setCart([randomFood]);
+    }
   }
   const removeAllItems = () => {
     setCart([]);
   };
   return (
     <div className="container">
-      <div className="foods-container row g-0">
-        <div className="meal-container col-md-10 col-12">
+      <div className="foods-container ">
+        <div className="meal-container ">
           {foods.map((meal) => (
             <Meal meal={meal} addToCart={addToCart} key={meal.id}></Meal>
           ))}
         </div>
-        <div className="cart-container col-md-2 col-12 ">
+        <div className="cart-container">
           <h2 className="text-center text-white">Order Food</h2>
           <p className="text-center text-white">
             Selected Item : {carts.length}{" "}
