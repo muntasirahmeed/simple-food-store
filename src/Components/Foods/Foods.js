@@ -14,9 +14,10 @@ const Foods = () => {
     let newCart = [];
     if (!carts.includes(meal)) {
       if (carts.length < 4) {
-        newCart=[...carts,meal]
+        newCart = [...carts, meal];
+      } else {
+        return newCart;
       }
-      
     } else {
       return;
     }
@@ -46,7 +47,7 @@ const Foods = () => {
           <p className="text-center text-white">
             Selected Item : {carts.length}
           </p>
-          <div >
+          <div>
             {carts.map((cart) => (
               <Cart cart={cart} key={cart.id}></Cart>
             ))}
