@@ -11,8 +11,8 @@ const Foods = () => {
       .then((data) => setFoods(data));
   }, []);
   const addToCart = (meal) => {
-    const newCart = [...carts, meal];
-    if (newCart.length > 4 ){
+   const newCart=[...carts,meal]
+    if (newCart.length > 4) {
       return;
     }
     setCart(newCart);
