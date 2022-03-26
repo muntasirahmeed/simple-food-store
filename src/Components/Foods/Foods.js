@@ -11,14 +11,19 @@ const Foods = () => {
       .then((data) => setFoods(data));
   }, []);
   const addToCart = (meal) => {
-    const newCart = [...carts, meal];
-    if (newCart.length > 4) {
+    let newCart = [];
+    if (!carts.includes(meal)) {
+      if (carts.length < 4) {
+        newCart=[...carts,meal]
+      }
+      
+    } else {
       return;
     }
     setCart(newCart);
   };
   function choseOne() {
-    if (carts === []) {
+    if (carts.length === 0) {
       return;
     } else {
       const randomFood = carts[Math.floor(Math.random() * carts.length)];
