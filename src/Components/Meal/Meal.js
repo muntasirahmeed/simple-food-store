@@ -10,8 +10,8 @@ const Meal = ({ meal ,addToCart}) => {
         <img src={image} alt="" />
       </div>
       <div className="info">
-        <h2>{name}</h2>
-        <p>Price : ${price}</p>
+        <h2 className="mt-0">{name}</h2>
+        <h6 className="mb-3">Price : ${price}</h6>
         <button onClick={()=>addToCart(meal)} className="btn btn-success ">
           Add to Cart
           <span>
