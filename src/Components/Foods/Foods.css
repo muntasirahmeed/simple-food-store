@@ -1,5 +1,4 @@
 .foods-container {
-  position: relative;
   display: grid;
   grid-template-columns: 4fr 1fr;
 }
@@ -11,8 +10,6 @@
 .cart-container {
   background-color: rgb(2, 53, 53);
   padding: 10px;
-  position: sticky !important;
-  top: 0;
 }
 @media (min-width: 280px) and (max-width: 600px) {
   .foods-container {

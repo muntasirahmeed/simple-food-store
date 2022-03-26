@@ -44,9 +44,9 @@ const Foods = () => {
         <div className="cart-container">
           <h2 className="text-center text-white">Order Food</h2>
           <p className="text-center text-white">
-            Selected Item : {carts.length}{" "}
+            Selected Item : {carts.length}
           </p>
-          <div id="cart">
+          <div >
             {carts.map((cart) => (
               <Cart cart={cart} key={cart.id}></Cart>
             ))}
