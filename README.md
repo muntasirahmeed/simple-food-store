@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Food Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Site Link: [Food Store](https://verdant-crisp-2a533b.netlify.app/).
 
 ## Available Scripts
 
